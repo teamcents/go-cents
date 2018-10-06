@@ -92,10 +92,10 @@ We assume that you have Go v1.10 installed, and `GOPATH` is set.
 
 You must have your working copy under `$GOPATH/src/github.com/teamcents/go-cents`.
 
-Most likely you will be working from your fork of `go-ethereum`, let's say from `github.com/nirname/go-ethereum`. Clone or move your fork into the right place:
+Most likely you will be working from your fork of `go-cents`, let's say from `github.com/nirname/go-cents`. Clone or move your fork into the right place:
 
 ```
-git clone git@github.com:nirname/go-ethereum.git $GOPATH/src/github.com/teamcents/go-cents
+git clone git@github.com:nirname/go-cents.git $GOPATH/src/github.com/teamcents/go-cents
 ```
 
 
@@ -235,10 +235,10 @@ Please make sure your contributions adhere to our coding guidelines:
 
 ## License
 
-The go-ethereum library (i.e. all code outside of the `cmd` directory) is licensed under the
+The go-cents library (i.e. all code outside of the `cmd` directory) is licensed under the
 [GNU Lesser General Public License v3.0](https://www.gnu.org/licenses/lgpl-3.0.en.html), also
 included in our repository in the `COPYING.LESSER` file.
 
-The go-ethereum binaries (i.e. all code inside of the `cmd` directory) is licensed under the
+The go-cents binaries (i.e. all code inside of the `cmd` directory) is licensed under the
 [GNU General Public License v3.0](https://www.gnu.org/licenses/gpl-3.0.en.html), also included
 in our repository in the `COPYING` file.
