@@ -20,12 +20,12 @@ import (
 	"fmt"
 	"io/ioutil"
 
-	"github.com/ethereum/go-ethereum/accounts"
-	"github.com/ethereum/go-ethereum/accounts/keystore"
-	"github.com/ethereum/go-ethereum/cmd/utils"
-	"github.com/ethereum/go-ethereum/console"
-	"github.com/ethereum/go-ethereum/crypto"
-	"github.com/ethereum/go-ethereum/log"
+	"github.com/teamcents/go-cents/accounts"
+	"github.com/teamcents/go-cents/accounts/keystore"
+	"github.com/teamcents/go-cents/cmd/utils"
+	"github.com/teamcents/go-cents/console"
+	"github.com/teamcents/go-cents/crypto"
+	"github.com/teamcents/go-cents/log"
 	"gopkg.in/urfave/cli.v1"
 )
 
