@@ -21,8 +21,8 @@ import (
 
 	"math/big"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/params"
+	"github.com/teamcents/go-cents/common"
+	"github.com/teamcents/go-cents/params"
 )
 
 var (

@@ -21,12 +21,12 @@ import (
 	"fmt"
 	"sync"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/common/hexutil"
-	"github.com/ethereum/go-ethereum/p2p"
-	"github.com/ethereum/go-ethereum/rlp"
-	"github.com/ethereum/go-ethereum/swarm/storage"
-	whisper "github.com/ethereum/go-ethereum/whisper/whisperv5"
+	"github.com/teamcents/go-cents/common"
+	"github.com/teamcents/go-cents/common/hexutil"
+	"github.com/teamcents/go-cents/p2p"
+	"github.com/teamcents/go-cents/rlp"
+	"github.com/teamcents/go-cents/swarm/storage"
+	whisper "github.com/teamcents/go-cents/whisper/whisperv5"
 )
 
 const (

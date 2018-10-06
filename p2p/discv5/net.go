@@ -24,13 +24,13 @@ import (
 	"net"
 	"time"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/common/mclock"
-	"github.com/ethereum/go-ethereum/crypto"
-	"github.com/ethereum/go-ethereum/crypto/sha3"
-	"github.com/ethereum/go-ethereum/log"
-	"github.com/ethereum/go-ethereum/p2p/netutil"
-	"github.com/ethereum/go-ethereum/rlp"
+	"github.com/teamcents/go-cents/common"
+	"github.com/teamcents/go-cents/common/mclock"
+	"github.com/teamcents/go-cents/crypto"
+	"github.com/teamcents/go-cents/crypto/sha3"
+	"github.com/teamcents/go-cents/log"
+	"github.com/teamcents/go-cents/p2p/netutil"
+	"github.com/teamcents/go-cents/rlp"
 )
 
 var (

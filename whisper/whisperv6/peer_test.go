@@ -28,13 +28,13 @@ import (
 
 	"net"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/common/hexutil"
-	"github.com/ethereum/go-ethereum/crypto"
-	"github.com/ethereum/go-ethereum/p2p"
-	"github.com/ethereum/go-ethereum/p2p/discover"
-	"github.com/ethereum/go-ethereum/p2p/nat"
-	"github.com/ethereum/go-ethereum/rlp"
+	"github.com/teamcents/go-cents/common"
+	"github.com/teamcents/go-cents/common/hexutil"
+	"github.com/teamcents/go-cents/crypto"
+	"github.com/teamcents/go-cents/p2p"
+	"github.com/teamcents/go-cents/p2p/discover"
+	"github.com/teamcents/go-cents/p2p/nat"
+	"github.com/teamcents/go-cents/rlp"
 )
 
 var keys = []string{

@@ -23,11 +23,11 @@ import (
 	"sync"
 	"testing"
 
-	"github.com/ethereum/go-ethereum/log"
-	"github.com/ethereum/go-ethereum/p2p"
-	"github.com/ethereum/go-ethereum/p2p/discover"
-	"github.com/ethereum/go-ethereum/p2p/protocols"
-	p2ptest "github.com/ethereum/go-ethereum/p2p/testing"
+	"github.com/teamcents/go-cents/log"
+	"github.com/teamcents/go-cents/p2p"
+	"github.com/teamcents/go-cents/p2p/discover"
+	"github.com/teamcents/go-cents/p2p/protocols"
+	p2ptest "github.com/teamcents/go-cents/p2p/testing"
 )
 
 const (

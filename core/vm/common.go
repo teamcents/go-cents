@@ -19,8 +19,8 @@ package vm
 import (
 	"math/big"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/common/math"
+	"github.com/teamcents/go-cents/common"
+	"github.com/teamcents/go-cents/common/math"
 )
 
 // calculates the memory size required for a step

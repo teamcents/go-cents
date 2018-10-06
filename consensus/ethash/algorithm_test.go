@@ -26,10 +26,10 @@ import (
 	"sync"
 	"testing"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/common/hexutil"
-	"github.com/ethereum/go-ethereum/core/types"
-	"github.com/ethereum/go-ethereum/crypto/sha3"
+	"github.com/teamcents/go-cents/common"
+	"github.com/teamcents/go-cents/common/hexutil"
+	"github.com/teamcents/go-cents/core/types"
+	"github.com/teamcents/go-cents/crypto/sha3"
 )
 
 // prepare converts an ethash cache or dataset from a byte stream into the internal

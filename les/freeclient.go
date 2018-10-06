@@ -23,11 +23,11 @@ import (
 	"sync"
 	"time"
 
-	"github.com/ethereum/go-ethereum/common/mclock"
-	"github.com/ethereum/go-ethereum/common/prque"
-	"github.com/ethereum/go-ethereum/ethdb"
-	"github.com/ethereum/go-ethereum/log"
-	"github.com/ethereum/go-ethereum/rlp"
+	"github.com/teamcents/go-cents/common/mclock"
+	"github.com/teamcents/go-cents/common/prque"
+	"github.com/teamcents/go-cents/ethdb"
+	"github.com/teamcents/go-cents/log"
+	"github.com/teamcents/go-cents/rlp"
 )
 
 // freeClientPool implements a client database that limits the connection time

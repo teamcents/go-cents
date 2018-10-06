@@ -22,12 +22,12 @@ import (
 	"fmt"
 	"math/big"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/common/hexutil"
-	"github.com/ethereum/go-ethereum/common/math"
-	"github.com/ethereum/go-ethereum/core/types"
-	"github.com/ethereum/go-ethereum/params"
-	"github.com/ethereum/go-ethereum/rlp"
+	"github.com/teamcents/go-cents/common"
+	"github.com/teamcents/go-cents/common/hexutil"
+	"github.com/teamcents/go-cents/common/math"
+	"github.com/teamcents/go-cents/core/types"
+	"github.com/teamcents/go-cents/params"
+	"github.com/teamcents/go-cents/rlp"
 )
 
 // TransactionTest checks RLP decoding and sender derivation of transactions.

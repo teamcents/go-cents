@@ -29,10 +29,10 @@ import (
 	"path/filepath"
 	"testing"
 
-	"github.com/ethereum/go-ethereum/swarm/api"
-	"github.com/ethereum/go-ethereum/swarm/storage"
+	"github.com/teamcents/go-cents/swarm/api"
+	"github.com/teamcents/go-cents/swarm/storage"
 
-	"github.com/ethereum/go-ethereum/log"
+	"github.com/teamcents/go-cents/log"
 
 	colorable "github.com/mattn/go-colorable"
 )

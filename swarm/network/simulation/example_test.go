@@ -22,12 +22,12 @@ import (
 	"sync"
 	"time"
 
-	"github.com/ethereum/go-ethereum/log"
-	"github.com/ethereum/go-ethereum/node"
-	"github.com/ethereum/go-ethereum/p2p"
-	"github.com/ethereum/go-ethereum/p2p/simulations/adapters"
-	"github.com/ethereum/go-ethereum/swarm/network"
-	"github.com/ethereum/go-ethereum/swarm/network/simulation"
+	"github.com/teamcents/go-cents/log"
+	"github.com/teamcents/go-cents/node"
+	"github.com/teamcents/go-cents/p2p"
+	"github.com/teamcents/go-cents/p2p/simulations/adapters"
+	"github.com/teamcents/go-cents/swarm/network"
+	"github.com/teamcents/go-cents/swarm/network/simulation"
 )
 
 // Every node can have a Kademlia associated using the node bucket under

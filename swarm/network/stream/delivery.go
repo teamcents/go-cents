@@ -22,12 +22,12 @@ import (
 
 	"fmt"
 
-	"github.com/ethereum/go-ethereum/metrics"
-	"github.com/ethereum/go-ethereum/p2p/discover"
-	"github.com/ethereum/go-ethereum/swarm/log"
-	"github.com/ethereum/go-ethereum/swarm/network"
-	"github.com/ethereum/go-ethereum/swarm/spancontext"
-	"github.com/ethereum/go-ethereum/swarm/storage"
+	"github.com/teamcents/go-cents/metrics"
+	"github.com/teamcents/go-cents/p2p/discover"
+	"github.com/teamcents/go-cents/swarm/log"
+	"github.com/teamcents/go-cents/swarm/network"
+	"github.com/teamcents/go-cents/swarm/spancontext"
+	"github.com/teamcents/go-cents/swarm/storage"
 	opentracing "github.com/opentracing/opentracing-go"
 )
 

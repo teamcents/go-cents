@@ -22,13 +22,13 @@ import (
 	"sync"
 	"time"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/core/rawdb"
-	"github.com/ethereum/go-ethereum/core/state"
-	"github.com/ethereum/go-ethereum/crypto/sha3"
-	"github.com/ethereum/go-ethereum/ethdb"
-	"github.com/ethereum/go-ethereum/log"
-	"github.com/ethereum/go-ethereum/trie"
+	"github.com/teamcents/go-cents/common"
+	"github.com/teamcents/go-cents/core/rawdb"
+	"github.com/teamcents/go-cents/core/state"
+	"github.com/teamcents/go-cents/crypto/sha3"
+	"github.com/teamcents/go-cents/ethdb"
+	"github.com/teamcents/go-cents/log"
+	"github.com/teamcents/go-cents/trie"
 )
 
 // stateReq represents a batch of state fetch requests grouped together into

@@ -21,17 +21,17 @@ import (
 	"context"
 	"math/big"
 
-	"github.com/ethereum/go-ethereum/accounts"
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/core"
-	"github.com/ethereum/go-ethereum/core/state"
-	"github.com/ethereum/go-ethereum/core/types"
-	"github.com/ethereum/go-ethereum/core/vm"
-	"github.com/ethereum/go-ethereum/eth/downloader"
-	"github.com/ethereum/go-ethereum/ethdb"
-	"github.com/ethereum/go-ethereum/event"
-	"github.com/ethereum/go-ethereum/params"
-	"github.com/ethereum/go-ethereum/rpc"
+	"github.com/teamcents/go-cents/accounts"
+	"github.com/teamcents/go-cents/common"
+	"github.com/teamcents/go-cents/core"
+	"github.com/teamcents/go-cents/core/state"
+	"github.com/teamcents/go-cents/core/types"
+	"github.com/teamcents/go-cents/core/vm"
+	"github.com/teamcents/go-cents/eth/downloader"
+	"github.com/teamcents/go-cents/ethdb"
+	"github.com/teamcents/go-cents/event"
+	"github.com/teamcents/go-cents/params"
+	"github.com/teamcents/go-cents/rpc"
 )
 
 // Backend interface provides the common API services (that are provided by

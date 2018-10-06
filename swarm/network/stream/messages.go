@@ -21,11 +21,11 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/ethereum/go-ethereum/metrics"
-	"github.com/ethereum/go-ethereum/swarm/log"
-	bv "github.com/ethereum/go-ethereum/swarm/network/bitvector"
-	"github.com/ethereum/go-ethereum/swarm/spancontext"
-	"github.com/ethereum/go-ethereum/swarm/storage"
+	"github.com/teamcents/go-cents/metrics"
+	"github.com/teamcents/go-cents/swarm/log"
+	bv "github.com/teamcents/go-cents/swarm/network/bitvector"
+	"github.com/teamcents/go-cents/swarm/spancontext"
+	"github.com/teamcents/go-cents/swarm/storage"
 	opentracing "github.com/opentracing/opentracing-go"
 )
 

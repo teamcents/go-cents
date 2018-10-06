@@ -23,17 +23,17 @@ import (
 	"sync"
 	"time"
 
-	"github.com/ethereum/go-ethereum/metrics"
-	"github.com/ethereum/go-ethereum/p2p"
-	"github.com/ethereum/go-ethereum/p2p/discover"
-	"github.com/ethereum/go-ethereum/p2p/protocols"
-	"github.com/ethereum/go-ethereum/rpc"
-	"github.com/ethereum/go-ethereum/swarm/log"
-	"github.com/ethereum/go-ethereum/swarm/network"
-	"github.com/ethereum/go-ethereum/swarm/network/stream/intervals"
-	"github.com/ethereum/go-ethereum/swarm/pot"
-	"github.com/ethereum/go-ethereum/swarm/state"
-	"github.com/ethereum/go-ethereum/swarm/storage"
+	"github.com/teamcents/go-cents/metrics"
+	"github.com/teamcents/go-cents/p2p"
+	"github.com/teamcents/go-cents/p2p/discover"
+	"github.com/teamcents/go-cents/p2p/protocols"
+	"github.com/teamcents/go-cents/rpc"
+	"github.com/teamcents/go-cents/swarm/log"
+	"github.com/teamcents/go-cents/swarm/network"
+	"github.com/teamcents/go-cents/swarm/network/stream/intervals"
+	"github.com/teamcents/go-cents/swarm/pot"
+	"github.com/teamcents/go-cents/swarm/state"
+	"github.com/teamcents/go-cents/swarm/storage"
 )
 
 const (

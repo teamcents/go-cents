@@ -25,9 +25,9 @@ import (
 	"testing"
 	"time"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/crypto"
-	whisper "github.com/ethereum/go-ethereum/whisper/whisperv6"
+	"github.com/teamcents/go-cents/common"
+	"github.com/teamcents/go-cents/crypto"
+	whisper "github.com/teamcents/go-cents/whisper/whisperv6"
 )
 
 const powRequirement = 0.00001

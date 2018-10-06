@@ -38,12 +38,12 @@ import (
 	"sync"
 	"time"
 
-	"github.com/ethereum/go-ethereum/log"
-	"github.com/ethereum/go-ethereum/metrics"
-	"github.com/ethereum/go-ethereum/p2p"
-	"github.com/ethereum/go-ethereum/rlp"
-	"github.com/ethereum/go-ethereum/swarm/spancontext"
-	"github.com/ethereum/go-ethereum/swarm/tracing"
+	"github.com/teamcents/go-cents/log"
+	"github.com/teamcents/go-cents/metrics"
+	"github.com/teamcents/go-cents/p2p"
+	"github.com/teamcents/go-cents/rlp"
+	"github.com/teamcents/go-cents/swarm/spancontext"
+	"github.com/teamcents/go-cents/swarm/tracing"
 	opentracing "github.com/opentracing/opentracing-go"
 )
 

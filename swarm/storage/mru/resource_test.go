@@ -27,12 +27,12 @@ import (
 	"testing"
 	"time"
 
-	"github.com/ethereum/go-ethereum/contracts/ens"
-	"github.com/ethereum/go-ethereum/crypto"
-	"github.com/ethereum/go-ethereum/log"
-	"github.com/ethereum/go-ethereum/swarm/chunk"
-	"github.com/ethereum/go-ethereum/swarm/multihash"
-	"github.com/ethereum/go-ethereum/swarm/storage"
+	"github.com/teamcents/go-cents/contracts/ens"
+	"github.com/teamcents/go-cents/crypto"
+	"github.com/teamcents/go-cents/log"
+	"github.com/teamcents/go-cents/swarm/chunk"
+	"github.com/teamcents/go-cents/swarm/multihash"
+	"github.com/teamcents/go-cents/swarm/storage"
 )
 
 var (

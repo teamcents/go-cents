@@ -22,10 +22,10 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/ethereum/go-ethereum/cmd/utils"
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/log"
-	"github.com/ethereum/go-ethereum/swarm/storage"
+	"github.com/teamcents/go-cents/cmd/utils"
+	"github.com/teamcents/go-cents/common"
+	"github.com/teamcents/go-cents/log"
+	"github.com/teamcents/go-cents/swarm/storage"
 	"gopkg.in/urfave/cli.v1"
 )
 

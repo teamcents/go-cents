@@ -36,12 +36,12 @@ import (
 	"strings"
 	"time"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/metrics"
-	"github.com/ethereum/go-ethereum/swarm/api"
-	"github.com/ethereum/go-ethereum/swarm/log"
-	"github.com/ethereum/go-ethereum/swarm/storage"
-	"github.com/ethereum/go-ethereum/swarm/storage/mru"
+	"github.com/teamcents/go-cents/common"
+	"github.com/teamcents/go-cents/metrics"
+	"github.com/teamcents/go-cents/swarm/api"
+	"github.com/teamcents/go-cents/swarm/log"
+	"github.com/teamcents/go-cents/swarm/storage"
+	"github.com/teamcents/go-cents/swarm/storage/mru"
 
 	"github.com/rs/cors"
 )

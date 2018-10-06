@@ -22,8 +22,8 @@ import (
 	"regexp"
 	"strings"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/swarm/storage"
+	"github.com/teamcents/go-cents/common"
+	"github.com/teamcents/go-cents/swarm/storage"
 )
 
 //matches hex swarm hashes

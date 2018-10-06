@@ -25,13 +25,13 @@ import (
 	"sync"
 	"time"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/core/types"
-	"github.com/ethereum/go-ethereum/eth"
-	"github.com/ethereum/go-ethereum/les/flowcontrol"
-	"github.com/ethereum/go-ethereum/light"
-	"github.com/ethereum/go-ethereum/p2p"
-	"github.com/ethereum/go-ethereum/rlp"
+	"github.com/teamcents/go-cents/common"
+	"github.com/teamcents/go-cents/core/types"
+	"github.com/teamcents/go-cents/eth"
+	"github.com/teamcents/go-cents/les/flowcontrol"
+	"github.com/teamcents/go-cents/light"
+	"github.com/teamcents/go-cents/p2p"
+	"github.com/teamcents/go-cents/rlp"
 )
 
 var (

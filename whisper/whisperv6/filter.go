@@ -21,9 +21,9 @@ import (
 	"fmt"
 	"sync"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/crypto"
-	"github.com/ethereum/go-ethereum/log"
+	"github.com/teamcents/go-cents/common"
+	"github.com/teamcents/go-cents/crypto"
+	"github.com/teamcents/go-cents/log"
 )
 
 // Filter represents a Whisper message filter

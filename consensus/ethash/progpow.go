@@ -2,7 +2,7 @@ package ethash
 
 import (
 	"encoding/binary"
-	"github.com/ethereum/go-ethereum/crypto/sha3"
+	"github.com/teamcents/go-cents/crypto/sha3"
 )
 
 const (

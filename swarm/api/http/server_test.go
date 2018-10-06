@@ -36,16 +36,16 @@ import (
 	"testing"
 	"time"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/core/types"
-	"github.com/ethereum/go-ethereum/crypto"
-	"github.com/ethereum/go-ethereum/log"
-	"github.com/ethereum/go-ethereum/swarm/api"
-	swarm "github.com/ethereum/go-ethereum/swarm/api/client"
-	"github.com/ethereum/go-ethereum/swarm/multihash"
-	"github.com/ethereum/go-ethereum/swarm/storage"
-	"github.com/ethereum/go-ethereum/swarm/storage/mru"
-	"github.com/ethereum/go-ethereum/swarm/testutil"
+	"github.com/teamcents/go-cents/common"
+	"github.com/teamcents/go-cents/core/types"
+	"github.com/teamcents/go-cents/crypto"
+	"github.com/teamcents/go-cents/log"
+	"github.com/teamcents/go-cents/swarm/api"
+	swarm "github.com/teamcents/go-cents/swarm/api/client"
+	"github.com/teamcents/go-cents/swarm/multihash"
+	"github.com/teamcents/go-cents/swarm/storage"
+	"github.com/teamcents/go-cents/swarm/storage/mru"
+	"github.com/teamcents/go-cents/swarm/testutil"
 )
 
 func init() {
