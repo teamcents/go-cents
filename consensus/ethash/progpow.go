@@ -408,4 +408,3 @@ func progpow(hash []byte, nonce uint64, size uint64, blockNumber uint64, cDag []
 
 	return digest[:], resultBytes[:]
 }
-s
