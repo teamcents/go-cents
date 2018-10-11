@@ -34,7 +34,7 @@ import (
 )
 
 const (
-	DefaultNetworkID = 3
+	DefaultNetworkID = 252525
 	// ProtocolMaxMsgSize maximum allowed message size
 	ProtocolMaxMsgSize = 10 * 1024 * 1024
 	// timeout for waiting
