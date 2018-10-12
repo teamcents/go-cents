@@ -19,6 +19,7 @@ package ethash
 import (
 	"bytes"
 	"encoding/binary"
+	"fmt"
 	"io/ioutil"
 	"math/big"
 	"os"
@@ -868,7 +869,7 @@ TEST(progpow, l1_cache)
 func TestCDag(t *testing.T) {
 	size := cacheSize(0)
 	cache := make([]uint32, size/4)
-	seed := seedHash(1)
+	seed := seedHash(0)
 	generateCache(cache, 0, seed)
 	cDag := make([]uint32, progpowCacheWords)
 	generateCDag(cDag, cache, 0)
@@ -882,7 +883,108 @@ func TestCDag(t *testing.T) {
 			t.Errorf("cdag err, index %d, expected %d, got %d", i, expect[i], v)
 		}
 	}
+}
 
+func TestRandomMerge(t *testing.T) {
+
+	type test struct {
+		a   uint32
+		b   uint32
+		exp uint32
+	}
+	for i, tt := range []test{
+		{1000000, 101, 33000101},
+		{2000000, 102, 66003366},
+		{3000000, 103, 2999975},
+		{4000000, 104, 4000104},
+		{1000000, 0, 33000000},
+		{2000000, 0, 66000000},
+		{3000000, 0, 3000000},
+		{4000000, 0, 4000000},
+	} {
+		res := tt.a
+		merge(&res, tt.b, uint32(i))
+		if res != tt.exp {
+			t.Errorf("test %d, expected %d, got %d", i, tt.exp, res)
+		}
+		fmt.Printf("res %d", res)
+	}
+
+}
+
+func TestRandomMath(t *testing.T) {
+
+	type test struct {
+		a   uint32
+		b   uint32
+		exp uint32
+	}
+	for i, tt := range []test{
+		{20, 22, 42},
+		{70000, 80000, 1305032704},
+		{70000, 80000, 1},
+		{1, 2, 1},
+		{3, 10000, 196608},
+		{3, 0, 3},
+		{3, 6, 2},
+		{3, 6, 7},
+		{3, 6, 5},
+		{0, 0xffffffff, 32},
+		{3 << 13, 1 << 5, 3},
+		{22, 20, 42},
+		{80000, 70000, 1305032704},
+		{80000, 70000, 1},
+		{2, 1, 1},
+		{10000, 3, 80000},
+		{0, 3, 0},
+		{6, 3, 2},
+		{6, 3, 7},
+		{6, 3, 5},
+		{0, 0xffffffff, 32},
+		{3 << 13, 1 << 5, 3},
+	} {
+		res := progpowMath(tt.a, tt.b, uint32(i))
+		if res != tt.exp {
+			t.Errorf("test %d, expected %d, got %d", i, tt.exp, res)
+		}
+	}
+
+}
+
+func TestProgpowKeccak256(t *testing.T) {
+	result := make([]uint32, 8)
+	header := make([]byte, 32)
+	hash := keccakF800Long(header, 0, result)
+	exp := "5dd431e5fbc604f499bfa0232f45f8f142d0ff5178f539e5a7800bf0643697af"
+	if !bytes.Equal(hash, common.FromHex(exp)) {
+		t.Errorf("expected %s, got %x", exp, hash)
+	}
+}
+
+func TestProgpowHash(t *testing.T) {
+	size := cacheSize(0)
+	cache := make([]uint32, size/4)
+	seed := seedHash(0)
+	generateCache(cache, 0, seed)
+	cDag := make([]uint32, progpowCacheWords)
+	generateCDag(cDag, cache, 0)
+	datasetSize := calcDatasetSize(0)
+	fmt.Printf("datasetSize %d , cacheSize %d\n", datasetSize, size)
+	//result := make([]uint32, 8)
+	header := make([]byte, 32)
+	keccak512 := makeHasher(sha3.NewKeccak512())
+	lookup := func(index uint32) []byte {
+		return generateDatasetItem(cache, index/16, keccak512)
+	}
+	digest, result := progpow(header, 0, datasetSize, 0, cDag, lookup)
+	expdig := common.FromHex("7d5b1d047bfb2ebeff3f60d6cc935fc1eb882ece1732eb4708425d2f11965535")
+	expres := common.FromHex("8c091b4eebc51620ca41e2b90a167d378dbfe01c0a255f70ee7004d85a646e17")
+	if !bytes.Equal(digest, expdig) {
+		t.Errorf("digest err, got %x expected %x", digest, expdig)
+	}
+	if !bytes.Equal(result, expres) {
+		t.Errorf("result err, got %x expected %x", result, expres)
+	}
 }
 
 // Benchmarks the cache generation performance.
@@ -951,18 +1053,8 @@ func BenchmarkProgpowOptimalLight(b *testing.B) {
 	generateCache(cache, 0, make([]byte, 32))
 
 	hash := hexutil.MustDecode("0xc9149cc0386e689d789a1c2f3d5d169a61a6218ed30e74414dc736e442ef3d1f")
-
-	keccak512 := makeHasher(sha3.NewKeccak512())
 	cDag := make([]uint32, progpowCacheWords)
-	rawData := generateDatasetItem(cache, 0, keccak512)
-
-	for i := uint32(0); i < progpowCacheWords; i += 2 {
-		if i != 0 && 2*i/16 != 2*(i-1)/16 {
-			rawData = generateDatasetItem(cache, 2*i/16, keccak512)
-		}
-		cDag[i+0] = binary.LittleEndian.Uint32(rawData[((2*i+0)%16)*4:])
-		cDag[i+1] = binary.LittleEndian.Uint32(rawData[((2*i+1)%16)*4:])
-	}
+	generateCDag(cDag, cache, 0)
 
 	b.ResetTimer()
 	for i := 0; i < b.N; i++ {
